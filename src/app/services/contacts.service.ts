@@ -11,7 +11,7 @@ private nextid:number=0;
   constructor() { 
    
     let contacts=this.getcontacts();
-
+/*
     if(contacts.length==0){
       this.nextid=0;
     
@@ -19,10 +19,11 @@ private nextid:number=0;
     else{
       let maxid=contacts[contacts.length-1].id;
       this.nextid=maxid+1;
+	  */
       contacts.sort(
         (a,b)=>a.id>b.id ? 1:-1)
         this.setlocalStorageContacts(contacts);
-    }
+    //}
     
     
   }
