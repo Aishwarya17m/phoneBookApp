@@ -1,0 +1,45 @@
+.addbutton,.cancel{
+    color: white;
+    border: 0;
+    background: #1976d2;
+    padding: 10px 20px 10px 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 5%;
+}
+.valid{
+    border:red 1px solid;
+}
+.errormsg{
+    display: none;
+   
+}
+small{
+    color:red;
+    margin-left: 5%;
+}
+.cancel{
+    color:black;
+    background: #a1a1a1;
+}
+.footer-createcontact{
+    display: flex;
+    justify-content: space-around;
+}
+
+.add-contact{
+   
+    margin: 20px;
+}
+input[type=text],[type=number]{
+padding:10px;
+margin: 5px;
+}
+.add-contact-header{
+    font-size: 20px;
+  
+    background: #1976d2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

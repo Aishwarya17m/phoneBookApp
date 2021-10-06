@@ -1,0 +1,57 @@
+<div class="add-contact-header">Add Contact</div>
+<form class="add-contact" #userForm="ngForm" >
+
+    <input type="text"
+     placeholder="Add First Name"
+      required 
+      [(ngModel)]="firstname" 
+      name="firstname"
+      #fname="ngModel" 
+      [class.valid]="fname.invalid && fname.touched" 
+      class="valid"
+      value ={{firstname}} >
+      <br/>
+      <div *ngIf="fname.errors && (fname.valid||fname.untouched)">
+        <small *ngIf="fname.errors.required">Firstname is required</small>
+       </div>
+      <br/>
+    <input type="text"
+     placeholder="Add Last Name" 
+     required
+     [(ngModel)]="lastname"
+     name="lastname"
+     #lname="ngModel"
+     [class.valid]="lname.invalid && lname.touched" 
+     class="valid"
+     value ={{lastname}}>
+     <br/>
+     <div *ngIf="lname.errors && (lname.valid||lname.untouched)">
+      <small *ngIf="lname.errors.required">Lastname is required</small>
+     </div>
+      <br/>
+    <input type="text" 
+    placeholder="Add Contact number"
+    required 
+    [(ngModel)]="contact" 
+    name="contact"
+    #phone="ngModel"
+    [class.valid]="phone.invalid && phone.touched" 
+    class="valid"
+    minlength="10"
+    [pattern]="mobpattern"
+    value ={{contact}}><br>
+    <div *ngIf="phone.errors && (phone.valid||phone.untouched)">
+      <small *ngIf="phone.errors.required">Contact no is required</small>
+      <small *ngIf="phone.errors.minlength">Contact no must be 10 digits</small><br>
+      <small *ngIf="phone.errors.pattern">Incorrect Contact number</small>
+    
+    </div>
+    <br/>
+    <div class="footer-createcontact">
+    <button  [disabled]="userForm.form.invalid " type="submit" class="addbutton" (click)="addContacts()">Create</button>
+    <button  class="cancel" (click)="close()">Cancel</button>
+  </div>
+</form>  
+
+
+

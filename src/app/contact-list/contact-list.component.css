@@ -1,0 +1,28 @@
+.contact-list{
+    background: white;
+    width: 81%;
+    margin-left: 10%;
+    box-shadow: 2px 4px 3px 2px  #d7dde3;
+    border-radius: 10px;
+}
+.contactWrapper{
+    margin-bottom: 3%;
+}
+.contact-name{
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+}
+.contact-number img{
+    vertical-align: middle;
+    width: 20px;
+    padding-left: 20px;
+}
+.contact-number{
+    color: #666666;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
